@@ -5,11 +5,13 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import ForgotPassword from "./pages/ForgotPassword";
 import "react-toastify/dist/ReactToastify.css";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <>
       <Router>
+        <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/sign-in" element={<SignIn />} />
