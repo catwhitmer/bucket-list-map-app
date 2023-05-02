@@ -14,7 +14,6 @@ body {
 
 .nav-container {
   display: flex;
-  flex-direction: row-reverse;
   justify-content: space-between;
   background-color: #f1f1f1;
   color: #000000;
@@ -25,4 +24,17 @@ body {
 .nav-links {
   display: flex;
   gap: 20px;
+}
+
+a:link {
+  text-decoration: none;
+  color: #4b465e;
+}
+a:visited {
+  text-decoration: none;
+  color: #0e0d0d;
+}
+a:hover {
+  text-decoration: none;
+  color: #22ca5d;
 }
