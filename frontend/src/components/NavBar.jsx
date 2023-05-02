@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
-    <div className="nav-container">
+    <div className="navContainer">
       <div className="home-link">
         <Link className="link" to="/">
           Home
         </Link>
       </div>
-      <div className="nav-links">
+      <div className="navLinks">
         <Link className="link" to="/sign-in">
           Sign In
         </Link>

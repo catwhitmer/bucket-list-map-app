@@ -5,7 +5,7 @@ function Map() {
   const zoomLevel = 2.5;
 
   return (
-    <MapContainer className="map-container" center={position} zoom={zoomLevel}>
+    <MapContainer className="mapContainer" center={position} zoom={zoomLevel}>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
