@@ -2,7 +2,7 @@ import Map from "../components/Map";
 
 function Home() {
   return (
-    <div className="wrapper">
+    <div className="mapWrapper">
       <Map />
     </div>
   );
