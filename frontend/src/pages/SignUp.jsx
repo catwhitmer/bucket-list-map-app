@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import ArrowCircleRightRoundedIcon from "@mui/icons-material/ArrowCircleRightRounded";
 
 function SignUp() {
   const navigate = useNavigate();
@@ -23,6 +25,7 @@ function SignUp() {
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    // To-Do
   };
 
   return (
@@ -34,7 +37,6 @@ function SignUp() {
       <form onSubmit={onSubmit}>
         <input
           type="text"
-          className="nameInput"
           placeholder="Name"
           id="name"
           value={name}
@@ -43,7 +45,6 @@ function SignUp() {
 
         <input
           type="email"
-          className="emailInput"
           placeholder="Email"
           id="email"
           value={email}
@@ -52,7 +53,6 @@ function SignUp() {
 
         <div className="passwordInputDiv">
           <input
-            className="passwordInput"
             type={showPassword ? "text" : "password"}
             placeholder="Password"
             id="password"
@@ -60,10 +60,8 @@ function SignUp() {
             onChange={onChange}
           />
 
-          <img
+          <VisibilityIcon
             className="showPassword"
-            src=""
-            alt="Show password"
             onClick={() => setShowPassword((prevState) => !prevState)}
           />
         </div>
@@ -74,7 +72,9 @@ function SignUp() {
 
         <div className="signUpBar">
           <p signUpText>Sign Up</p>
-          <button className="signUpButton"></button>
+          <button className="signUpButton">
+            <ArrowCircleRightRoundedIcon />
+          </button>
         </div>
       </form>
 

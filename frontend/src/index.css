@@ -53,3 +53,24 @@ a:hover {
   align-items: center;
   color: #f1f1f1;
 }
+
+.showPassword {
+  cursor: pointer;
+  position: absolute;
+}
+
+.forgotPasswordLink {
+  cursor: pointer;
+  color: #00cc66;
+  font-weight: 600;
+  text-align: right;
+}
+
+.signUpLink {
+  cursor: pointer;
+  color: #00cc66;
+  font-weight: 600;
+  text-align: left;
+}
+
+.registerLink {}

@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import ArrowCircleRightRoundedIcon from "@mui/icons-material/ArrowCircleRightRounded";
 
 function SignIn() {
   const navigate = useNavigate();
@@ -22,6 +25,7 @@ function SignIn() {
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    // To-Do
   };
 
   return (
@@ -33,7 +37,6 @@ function SignIn() {
       <form onSubmit={onSubmit}>
         <input
           type="text"
-          className="nameInput"
           placeholder="Name"
           id="name"
           value={name}
@@ -42,7 +45,6 @@ function SignIn() {
 
         <input
           type="email"
-          className="emailInput"
           placeholder="Email"
           id="email"
           value={email}
@@ -51,7 +53,6 @@ function SignIn() {
 
         <div className="passwordInputDiv">
           <input
-            className="passwordInput"
             type={showPassword ? "text" : "password"}
             placeholder="Password"
             id="password"
@@ -59,27 +60,23 @@ function SignIn() {
             onChange={onChange}
           />
 
-          <img
+          <VisibilityIcon
             className="showPassword"
-            src=""
-            alt="Show password"
             onClick={() => setShowPassword((prevState) => !prevState)}
           />
         </div>
 
-        <Link className="forgotPasswordLink" to="/forgot-password">
-          Forgot Password
-        </Link>
-
-        <div className="signUpBar">
-          <p signUpText>Sign Up</p>
-          <button className="signUpButton"></button>
+        <div className="signInBar">
+          <p className="signInText">Sign In</p>
+          <button className="signInButton">
+            <ArrowCircleRightRoundedIcon />
+          </button>
         </div>
-      </form>
 
-      <Link className="registerLink" to="/sign-in">
-        Sign In Instead
-      </Link>
+        <Link className="signUpLink" to="/sign-up">
+          Sign up
+        </Link>
+      </form>
     </div>
   );
 }
