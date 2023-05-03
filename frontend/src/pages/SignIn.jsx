@@ -36,6 +36,7 @@ function SignIn() {
 
       <form className="form" onSubmit={onSubmit}>
         <input
+          className="formInput"
           type="text"
           placeholder="Name"
           id="name"
@@ -44,6 +45,7 @@ function SignIn() {
         />
 
         <input
+          className="formInput"
           type="email"
           placeholder="Email"
           id="email"
@@ -53,6 +55,7 @@ function SignIn() {
 
         <div className="passwordInputDiv">
           <input
+            className="formInput"
             type={showPassword ? "text" : "password"}
             placeholder="Password"
             id="password"
@@ -68,8 +71,8 @@ function SignIn() {
 
         <div className="signInBar">
           <p className="signInText">Sign In</p>
-          <button className="signInButton">
-            <ArrowCircleRightRoundedIcon />
+          <button className="button">
+            <ArrowCircleRightRoundedIcon className="arrowButton" />
           </button>
         </div>
       </form>

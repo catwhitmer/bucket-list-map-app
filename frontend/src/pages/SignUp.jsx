@@ -36,6 +36,7 @@ function SignUp() {
 
       <form className="form" onSubmit={onSubmit}>
         <input
+          className="formInput"
           type="text"
           placeholder="Name"
           id="name"
@@ -44,6 +45,7 @@ function SignUp() {
         />
 
         <input
+          className="formInput"
           type="email"
           placeholder="Email"
           id="email"
@@ -53,6 +55,7 @@ function SignUp() {
 
         <div className="passwordInputDiv">
           <input
+            className="formInput"
             type={showPassword ? "text" : "password"}
             placeholder="Password"
             id="password"
@@ -66,16 +69,16 @@ function SignUp() {
           />
         </div>
 
+        <div className="signUpBar">
+          <p className="signUpText">Sign Up</p>
+          <button className="button">
+            <ArrowCircleRightRoundedIcon className="arrowButton" />
+          </button>
+        </div>
+
         <Link className="forgotPasswordLink" to="/forgot-password">
           Forgot Password
         </Link>
-
-        <div className="signUpBar">
-          <p className="signUpText">Sign Up</p>
-          <button className="signUpButton">
-            <ArrowCircleRightRoundedIcon />
-          </button>
-        </div>
       </form>
     </div>
   );

@@ -55,11 +55,18 @@ a:hover {
 }
 
 .form {
+  width: 40%;
+  height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #f1f1f1f1;
+  gap: 10px;
+}
+
+.formInput {
+  width: 400px;
+  height: 30px;
 }
 
 .showPassword {
@@ -69,18 +76,29 @@ a:hover {
 }
 
 .forgotPasswordLink {
+  padding: 50px;
   cursor: pointer;
   color: #00cc66;
-  font-weight: 600;
-  text-align: right;
+  font-weight: 300;
 }
 
 .signUpBar,
-.signUpText,
-.signUpButton {
+.signInBar {
+  display: flex;
+  flex-direction: row;
   cursor: pointer;
-  color: #00cc66;
-  font-weight: 600;
-  text-align: left;
+  background-color: #000000;
+  font-weight: 300;
 }
 
+.button {
+  background: #000000;
+  border: #000000;
+}
+
+.arrowButton {
+  padding-left: 10px;
+  cursor: pointer;
+  font-size: large;
+  color: #00cc66;
+}
