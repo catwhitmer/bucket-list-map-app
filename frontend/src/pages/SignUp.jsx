@@ -34,7 +34,7 @@ function SignUp() {
         <p className="pageHeader">Sign Up!</p>
       </header>
 
-      <form onSubmit={onSubmit}>
+      <form className="form" onSubmit={onSubmit}>
         <input
           type="text"
           placeholder="Name"
@@ -71,16 +71,12 @@ function SignUp() {
         </Link>
 
         <div className="signUpBar">
-          <p signUpText>Sign Up</p>
+          <p className="signUpText">Sign Up</p>
           <button className="signUpButton">
             <ArrowCircleRightRoundedIcon />
           </button>
         </div>
       </form>
-
-      <Link className="registerLink" to="/sign-in">
-        Sign In Instead
-      </Link>
     </div>
   );
 }

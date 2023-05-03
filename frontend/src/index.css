@@ -54,9 +54,18 @@ a:hover {
   color: #f1f1f1;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f1f1f1f1;
+}
+
 .showPassword {
   cursor: pointer;
   position: absolute;
+  padding-left: 10px;
 }
 
 .forgotPasswordLink {
@@ -66,11 +75,12 @@ a:hover {
   text-align: right;
 }
 
-.signUpLink {
+.signUpBar,
+.signUpText,
+.signUpButton {
   cursor: pointer;
   color: #00cc66;
   font-weight: 600;
   text-align: left;
 }
 
-.registerLink {}
