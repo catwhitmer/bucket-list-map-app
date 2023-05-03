@@ -67,6 +67,7 @@ a:hover {
 .formInput {
   width: 400px;
   height: 30px;
+  border-radius: 10px;
 }
 
 .showPassword {
