@@ -1,8 +1,6 @@
 const connectDB = require("./../config/db");
 
 const User = function (user) {
-  this.first_name = user.first_name;
-  this.last_name = user.last_name;
   this.email = user.email;
   this.password = user.password;
 };
@@ -44,8 +42,8 @@ User.findAll = function (result) {
 
 User.update = function (id, user, result) {
   connectDB.query(
-    "UPDATE users SET first_name=?,last_name=?,email=?,password=? WHERE id = ?",
-    [user.first_name, user.last_name, user.email, user.password, id],
+    "UPDATE users SET email=?,password=? WHERE id = ?",
+    [user.email, user.password, id],
     function (err, res) {
       if (err) {
         console.log("error: ", err);
