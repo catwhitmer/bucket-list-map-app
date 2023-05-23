@@ -14,16 +14,14 @@ const getUsers = asyncHandler(async (req, res) => {
 // @route POST /api/users
 // @access Private
 const setUser = asyncHandler(async (req, res) => {
-  if (!req.body.name) {
+  if (!req.body.email) {
     res.status(400);
-    throw new Error("Please add a name");
+    throw new Error("Please add an email");
   }
 
   const user = await User.create({
-    name: req.body.name,
-    species: req.body.species,
-    breed: req.body.breed,
-    age: req.body.age,
+    email: req.body.email,
+    password: req.body.password,
   });
   res.status(200).json(user);
 });
