@@ -11,11 +11,12 @@ function SignUp() {
 
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
+    username: "",
     email: "",
     password: "",
   });
 
-  const { email, password } = formData;
+  const { username, email, password } = formData;
 
   const onChange = (e) => {
     setFormData((prevState) => ({
@@ -46,6 +47,15 @@ function SignUp() {
       </header>
 
       <form className="form" onSubmit={onSubmit}>
+      <input
+          className="formInput"
+          type="username"
+          placeholder="username"
+          id="username"
+          value={username}
+          onChange={onChange}
+        />
+        
         <input
           className="formInput"
           type="email"
