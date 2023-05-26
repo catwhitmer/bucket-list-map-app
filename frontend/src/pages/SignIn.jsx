@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import ArrowCircleRightRoundedIcon from "@mui/icons-material/ArrowCircleRightRounded";
@@ -8,8 +8,6 @@ import ArrowCircleRightRoundedIcon from "@mui/icons-material/ArrowCircleRightRou
 function SignIn() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
-  const userData = useSelector((state) => state.users.users);
 
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
