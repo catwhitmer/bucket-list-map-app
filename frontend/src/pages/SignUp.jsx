@@ -50,7 +50,7 @@ function SignUp() {
       <input
           className="formInput"
           type="username"
-          placeholder="username"
+          placeholder="Username"
           id="username"
           value={username}
           onChange={onChange}
@@ -59,7 +59,7 @@ function SignUp() {
         <input
           className="formInput"
           type="email"
-          placeholder="email"
+          placeholder="Email"
           id="email"
           value={email}
           onChange={onChange}
@@ -69,7 +69,7 @@ function SignUp() {
           <input
             className="formInput"
             type={showPassword ? "text" : "password"}
-            placeholder="password"
+            placeholder="Password"
             id="password"
             value={password}
             onChange={onChange}
