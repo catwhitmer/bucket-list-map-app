@@ -10,7 +10,7 @@ const initialState = {
 // Register new user
 export const register = createAsyncThunk(
   "users/register",
-  async ({ email, password }, thunkAPI) => {
+  async ({ username, email, password }, thunkAPI) => {
     try {
       const response = await fetch(
         "api/users",
@@ -21,6 +21,7 @@ export const register = createAsyncThunk(
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
+            username,
             email,
             password,
           }),
